@@ -25,8 +25,8 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 │   ├── experiments
 │   └── python
 ├── data
-├── figures
-└── docs
+├── docs
+└── figures
 ```
 
 ### 🔍 Detailed Breakdown
@@ -41,9 +41,9 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 
 - **`data/`**: Contains anonymized datasets for all experiments.
 
-- **`figures/`**: All figures used in the paper, generated using scripts in `code/R/`.
-
 - **`docs/`**: Contains a visualization of the analysis script in `code/R/`.
+
+- **`figures/`**: All figures used in the paper, generated using scripts in `code/R/`.
 
 ---
 <!-- 

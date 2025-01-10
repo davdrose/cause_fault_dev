@@ -1,0 +1,494 @@
+---
+title: "Causal verbs and responsibility"
+author: "Cici Hou, David Rose & Ellen Markman"
+date: "`r Sys.time()`"
+output:
+  bookdown::html_document2:
+    toc: true
+    toc_depth: 6
+    toc_float: true
+    theme: cosmo
+    highlight: tango
+---
+
+# Load packages
+
+```{r eval=TRUE, include=FALSE, message=FALSE, warning=FALSE}
+
+library("tidytext")
+library("xtable")          # for saving tables
+library("janitor")         # for cleaning variable names
+library("emmeans")         # for comparing means
+library("brms")            # for Bayesian data analysis
+library("patchwork")       # for combining figures
+library("knitr")           # for knitting 
+library("marginaleffects") # for marginal effects
+library("ggtext")          # for adding text to figures
+library("grid")            # for annotation custom
+library("RColorBrewer")    # for colors 
+library("ggtext")          # for text in ggplot 
+library("tidyverse")       # for everything else
+```
+
+# Settings
+
+```{r message=FALSE, warning=FALSE}
+
+# set theme 
+theme_set(theme_classic())
+
+# sum coding
+options(contrasts = c("contr.sum","contr.poly"))
+
+# suppress grouping warning 
+options(dplyr.summarise.inform = F)
+```
+
+# Helper functions 
+
+```{r}
+
+# for color gradients
+make_gradient = function(deg = 45, n = 100, cols = blues9) {
+  cols = colorRampPalette(cols)(n + 1)
+  rad = deg / (180 / pi)
+  mat = matrix(
+    data = rep(seq(0, 1, length.out = n) * cos(rad), n),
+    byrow = TRUE,
+    ncol = n
+  ) +
+  matrix(
+    data = rep(seq(0, 1, length.out = n) * sin(rad), n),
+    byrow = FALSE,
+    ncol = n
+  )
+  mat = mat - min(mat)
+  mat = mat / max(mat)
+  mat = 1 + mat * n
+  mat = matrix(data = cols[round(mat)], ncol = n)
+  grid::rasterGrob(
+    image = mat,
+    width = unit(1, "npc"),
+    height = unit(1, "npc"),
+    interpolate = TRUE
+  )
+}
+
+# softmax function
+softmax = function(x, beta = 1) {
+  return(exp(x * beta) / sum(exp(x * beta)))
+}
+
+```
+
+# EXPERIMENT 1: CHAIN CASES
+## DATA
+### Read in data
+```{r}
+
+df.exp1_children = read_csv("../../data/exp1_child_clean.csv") 
+
+df.exp1_children = df.exp1_children %>%
+  select(scenario_order, gender_order, question, participant_age, age_float, distal, proximal, scenario, response_id, gender, lan_spoken)
+
+```
+### Demographics
+
+```{r message=FALSE, warning=FALSE}
+# gender
+df.exp1_children %>%
+  group_by(gender) %>%
+  summarise(n = n_distinct(response_id)) %>%
+  print()
+
+# language spoken
+df.exp1_children %>%
+    mutate(en_occurrence = ifelse(str_detect(lan_spoken, "en"), "en", "non-en")) %>%
+    group_by(en_occurrence) %>%
+    summarise(n = n_distinct(response_id)) %>%
+    print()
+```
+
+## STATS
+
+### Bayesian Model
+```{r message=FALSE, warning=FALSE}
+df.exp1_children_different = df.exp1_children %>%
+  mutate(response_pattern = case_when(
+    distal == 1 & proximal == 1 ~ "both",
+    distal == 0 & proximal == 0 ~ "neither",
+    TRUE ~ "different"
+  )) %>%
+  filter(response_pattern == "different") %>%
+  mutate(difference = distal - proximal,
+        difference = recode(difference, `-1` = 0))
+
+df.exp1_children_both = df.exp1_children %>%
+  mutate(response_pattern = case_when(
+    distal == 1 & proximal == 1 ~ "both",
+    distal == 0 & proximal == 0 ~ "neither",
+    TRUE ~ "different"
+  )) %>%
+  filter(response_pattern == "both") 
+
+
+ df.exp1_children_both = df.exp1_children_both %>% 
+  mutate(difference = 1) %>%
+  bind_rows(df.exp1_children_both %>% 
+              mutate(difference = 0)) 
+
+df.exp1_children_new = df.exp1_children_different %>% 
+  bind_rows(df.exp1_children_both) 
+  
+df.model = df.exp1_children_new %>% 
+  mutate(
+    # Convert to factor explicitly
+    question = as_factor(question),
+    question = fct_relevel(question, 
+                           "fault",   
+                           "cause", # second
+                           "lexical")  # etc...
+  )
+
+fit.brm.chain.children = brm(formula = difference ~ 1 + question * age_float + (1 | response_id) + (1 | scenario), 
+                     data = df.model,
+                     family = "bernoulli",
+                     seed = 1,
+                     iter = 4000,
+                     warmup = 1000,
+                     file = "cache/chain_cause_children_difference") 
+
+fit.brm.chain.children 
+```
+
+### Follow-up analysis 
+
+```{r}
+# effect of question 
+fit.brm.chain.children %>% 
+  emmeans(spec = pairwise ~ question, 
+          type = "response")
+
+# effect of age
+fit.brm.chain.children %>%
+  avg_slopes(variable = "age_float",
+             type = "link")
+  
+# interaction effect 
+fit.brm.chain.children %>% 
+  emtrends(specs = pairwise ~ question,
+           var = "age_float")
+```
+
+### Means and Confidence Interval  
+
+```{r}
+
+df.exp1_children_new %>% 
+  group_by(question) %>% 
+  summarise(
+    mean = mean(difference),
+    ci_lower = mean_cl_normal(difference)$ymin,
+    ci_upper = mean_cl_normal(difference)$ymax
+  )
+
+```
+
+## PLOTS
+
+```{r}
+df.model = df.exp1_children_new %>% 
+  mutate(difference = distal - proximal,
+        difference = recode(difference, `-1` = 0))
+
+fit.brm.chain.difference = brm(formula = difference ~ 1 + question*age_float + (1 | response_id) + (1 | scenario), 
+                     data = df.model,
+                     family = "bernoulli",
+                     seed = 1,
+                     iter = 4000,
+                     warmup = 1000,
+                     control = list(adapt_delta = .9999),
+                     cores = 8,
+                     file = "cache/fit.brm.chain.difference")
+
+fit.brm.chain.difference
+
+
+df.data = expand_grid(age_float = seq(3, 9, 0.1),
+                      question = c("cause", "lexical", "fault"))
+
+df.prediction = fit.brm.chain.difference %>% 
+  fitted(newdata = df.data,
+         re_formula = NA,
+          probs = c(0.1, 0.9)) %>% 
+  as_tibble() %>% 
+  bind_cols(df.data) %>% 
+  clean_names()
+
+df.linear = df.model %>% 
+  mutate(participant_age = factor(participant_age, 
+                            levels = c(3, 4, 5, 6, 7, 8, 9), 
+                            labels = c("3", "4", "5", "6", "7", "8", "9")))
+
+df.means = df.linear %>% 
+  group_by(participant_age, question) %>% 
+  summarize(
+    response = Hmisc::smean.cl.boot(difference)) %>%
+    mutate(index = c("response", "low", "high")) %>%
+    ungroup() %>% 
+    pivot_wider(names_from = index,
+                values_from = response) %>% 
+  mutate(participant_age = as.numeric(as.character(participant_age)))
+
+p2 = ggplot(mapping = aes(x = age_float, 
+                     y = difference,
+                     color = question)) + 
+  geom_hline(yintercept = 0.5, linetype = "dashed", color = "black") +
+  geom_smooth(data = df.prediction,
+              mapping = aes(y = estimate,
+                            ymin = q10,
+                            ymax = q90,
+                            color = question,
+                            fill = question),
+              stat = "identity",
+              alpha = 0.2) +
+  geom_pointrange(data = df.means,
+                  mapping = aes(x = participant_age,
+                                y = response,
+                                ymin = low,
+                                ymax = high,
+                                fill = question,
+                                shape = question),
+                  color = "black",
+                  size = 0.5,
+                  show.legend = FALSE,
+                  alpha = 0.8,
+                  position = position_dodge(width = 0.5)) +
+  ylab(element_blank()) +
+  scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), breaks=c("cause", "lexical", "fault")) +
+  scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), breaks=c("cause", "lexical", "fault")) +
+  scale_shape_manual(values = c(23, 21, 24)) +
+  scale_y_continuous(breaks = seq(0, 1, 0.25),
+                     labels = c("100% \n proximal", "75%", "50%", "75%", "100% \n distal"),
+                     limits = c(0, 1)) + 
+  scale_x_continuous(name = "Age",
+                     breaks = 3:9,
+                     labels = c("3", "4", "5", "6", "7", "8", "9")) +
+  theme(plot.title = element_text(hjust = 1),
+        axis.text.x = element_text(size = 16),
+        axis.text.y = element_text(size = 16),
+        axis.title.x = element_text(size = 16),
+        axis.title.y = element_text(size = 16),
+        legend.title = element_blank(),
+        text = element_text(size = 20))
+
+p2
+```
+
+# EXPERIMENT 2: ABSENCE CASES
+## DATA
+### Read in data
+```{r}
+df.exp2_children = read_csv("../../data/exp2_child_clean.csv") 
+
+df.exp2_children = df.exp2_children %>%
+  select(scenario_order, gender_order, question, participant_age, age_float, direct, absent, scenario, response_id, gender, lan_spoken)
+```
+### Demographics
+
+```{r message=FALSE, warning=FALSE}
+# gender
+df.exp2_children %>%
+  group_by(gender) %>%
+  summarise(n = n_distinct(response_id)) %>%
+  print()
+
+# language spoken
+df.exp2_children %>%
+    mutate(en_occurrence = ifelse(str_detect(lan_spoken, "en"), "en", "non-en")) %>%
+    group_by(en_occurrence) %>%
+    summarise(n = n_distinct(response_id)) %>%
+    print()
+```
+
+## STATS
+
+### Bayesian Model
+```{r message=FALSE, warning=FALSE}
+df.exp2_children_different = df.exp2_children %>%
+  mutate(response_pattern = case_when(
+    absent == 1 & direct == 1 ~ "both",
+    absent == 0 & direct == 0 ~ "neither",
+    TRUE ~ "different"
+  )) %>%
+  filter(response_pattern == "different") %>%
+  mutate(difference = absent - direct,
+        difference = recode(difference, `-1` = 0))
+
+df.exp2_children_both = df.exp2_children %>%
+  mutate(response_pattern = case_when(
+    absent == 1 & direct == 1 ~ "both",
+    absent == 0 & direct == 0 ~ "neither",
+    TRUE ~ "different"
+  )) %>%
+  filter(response_pattern == "both") 
+
+
+ df.exp2_children_both = df.exp2_children_both %>% 
+  mutate(difference = 1) %>%
+  bind_rows(df.exp2_children_both %>% 
+              mutate(difference = 0)) 
+
+df.exp2_children_new = df.exp2_children_different %>% 
+  bind_rows(df.exp2_children_both) 
+  
+df.model = df.exp2_children_new %>% 
+  mutate(
+    # Convert to factor explicitly
+    question = as_factor(question),
+    question = fct_relevel(question, 
+                           "fault",   
+                           "cause", # second
+                           "lexical")  # etc...
+  )
+
+fit.brm.absence.children = brm(formula = difference ~ 1 + question * age_float + (1 | response_id) + (1 | scenario), 
+                     data = df.model,
+                     family = "bernoulli",
+                     seed = 1,
+                     iter = 4000,
+                     warmup = 1000,
+                     file = "cache/absence_cause_children_difference") 
+
+fit.brm.absence.children 
+```
+
+### Follow-up analysis 
+
+```{r}
+# effect of question 
+fit.brm.absence.children %>% 
+  emmeans(spec = pairwise ~ question, 
+          type = "response")
+# 
+# # effect of age
+# fit.brm.absence.children %>%
+#   avg_slopes(variable = "age_float",
+#              type = "link")
+  
+# interaction effect 
+fit.brm.absence.children %>% 
+  emtrends(specs = pairwise ~ question,
+           var = "age_float")
+```
+
+### Means and Confidence Interval  
+
+```{r}
+
+df.exp2_children_new %>% 
+  group_by(question) %>% 
+  summarise(
+    mean = mean(difference),
+    ci_lower = mean_cl_normal(difference)$ymin,
+    ci_upper = mean_cl_normal(difference)$ymax
+  )
+
+```
+
+## PLOTS
+
+```{r}
+df.model = df.exp2_children_new %>% 
+  mutate(difference = absent - direct,
+        difference = recode(difference, `-1` = 0))
+
+fit.brm.absence.difference = brm(formula = difference ~ 1 + question*age_float + (1 | response_id) + (1 | scenario), 
+                     data = df.model,
+                     family = "bernoulli",
+                     seed = 1,
+                     iter = 4000,
+                     warmup = 1000,
+                     control = list(adapt_delta = .9999),
+                     cores = 8,
+                     file = "cache/fit.brm.absence.difference")
+
+fit.brm.absence.difference
+
+
+df.data = expand_grid(age_float = seq(3, 9, 0.1),
+                      question = c("cause", "lexical", "fault"))
+
+df.prediction = fit.brm.absence.difference %>% 
+  fitted(newdata = df.data,
+         re_formula = NA,
+          probs = c(0.1, 0.9)) %>% 
+  as_tibble() %>% 
+  bind_cols(df.data) %>% 
+  clean_names()
+
+df.linear = df.model %>% 
+  mutate(participant_age = factor(participant_age, 
+                            levels = c(3, 4, 5, 6, 7, 8, 9), 
+                            labels = c("3", "4", "5", "6", "7", "8", "9")))
+
+df.means = df.linear %>% 
+  group_by(participant_age, question) %>% 
+  summarize(
+    response = Hmisc::smean.cl.boot(difference)) %>%
+    mutate(index = c("response", "low", "high")) %>%
+    ungroup() %>% 
+    pivot_wider(names_from = index,
+                values_from = response) %>% 
+  mutate(participant_age = as.numeric(as.character(participant_age)))
+
+p2 = ggplot(mapping = aes(x = age_float, 
+                     y = difference,
+                     color = question)) + 
+  geom_hline(yintercept = 0.5, linetype = "dashed", color = "black") +
+  geom_smooth(data = df.prediction,
+              mapping = aes(y = estimate,
+                            ymin = q10,
+                            ymax = q90,
+                            color = question,
+                            fill = question),
+              stat = "identity",
+              alpha = 0.2) +
+  geom_pointrange(data = df.means,
+                  mapping = aes(x = participant_age,
+                                y = response,
+                                ymin = low,
+                                ymax = high,
+                                fill = question,
+                                shape = question),
+                  color = "black",
+                  size = 0.5,
+                  show.legend = FALSE,
+                  alpha = 0.8,
+                  position = position_dodge(width = 0.65)) +
+  ylab(element_blank()) +
+  scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), breaks=c("cause", "lexical", "fault")) +
+  scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), breaks=c("cause", "lexical", "fault")) +
+  scale_shape_manual(values = c(23, 21, 24)) +
+  scale_y_continuous(breaks = seq(0, 1, 0.25),
+                     labels = c("100% \n direct", "75%", "50%", "75%", "100% \n absent"),
+                     limits = c(0, 1)) + 
+  scale_x_continuous(name = "Age",
+                     breaks = 3:9,
+                     labels = c("3", "4", "5", "6", "7", "8", "9")) +
+  theme(plot.title = element_text(hjust = 1),
+        axis.text.x = element_text(size = 16),
+        axis.text.y = element_text(size = 16),
+        axis.title.x = element_text(size = 16),
+        axis.title.y = element_text(size = 16),
+        legend.title = element_blank(),
+        text = element_text(size = 20))
+
+p2
+```
+
+# SESSION INFO
+
+```{r}
+sessionInfo()
+```
