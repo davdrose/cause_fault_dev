@@ -1,93 +1,86 @@
-# Project name
+# Cause and Fault in Development
 
-## General points
+Welcome to the repository for the paper **"Cause and Fault in Development"**. This repository contains the experiments, data, analyses, and figures that support the research.
 
-- for folder and file names: 
-	+ don't use white space in either folder or filenames, use an underscore "_" instead
-	+ (almost always) use lower case only
-- always use relative paths in your code
-	+ for example, to save a figure from an R script inside the `code/R/` folder the path should be "../../figures/figure_name.pdf"
-- keep your folder structure organized
-	+ we recommend adhering to the folder structure in this repository 
-	+ more complex projects may have additional folders such as `videos/`, `tables/`, ...
-- note: some of the folders are empty except for a `.keep` file
-	+ the `.keep` file is just there to make sure that github includes the otherwise empty folder 
-	+ feel free to delete the `.keep` file once you've added another file to that folder
-- each code subfolder has a readme file that should be updated with information about the code scripts 
-- use github issues to keep track of any larger decisions that we make along the way 
-- make sure to create a slack channel for each project, link up the github repository with the slack channel, and add the people working on the project to the github repo and slack channel 
-- see our lab wiki for more help: https://github.com/cicl-stanford/wiki/wiki
+---
 
-## Repository structure 
+## 📖 Table of Contents
+- [Introduction](#introduction)
+- [Repository Structure](#repository-structure)
 
-```
+---
+
+<img src="figures/methodology.jpeg" alt="Methodology" width="100%" align="center">
+
+<br clear="left" />
+<br clear="right" />
+
+---
+
+## 📂 Repository Structure
+
+```plaintext
 ├── code
-│   ├── R
-│   ├── bash
-│   ├── experiments
-│   └── python
+│   ├── R
+│   ├── experiments
+│   └── python
 ├── data
 ├── figures
-├── papers
-├── presentation
-└── writeup
+└── docs
 ```
 
-### code 
+### 🔍 Detailed Breakdown
+- **`code/`**: All code for running experiments, analyzing data, and generating figures.
+  - **`experiments/`**: Experiment-specific code, including pre-registrations available via the Open Science Framework:
+    - **Experiment 1**  
+      - Fault question first ordering ([pre-registration](https://osf.io/2u4fp))  
+      - Fault question last ordering ([pre-registration](https://osf.io/f4n6w))  
+    - **Experiment 2** ([pre-registration](https://osf.io/sjakw))
+  - **`R/`**: Scripts for data analysis and figure generation.  
+    (View a rendered file [here](https://davdrose.github.io/cause_fault_dev/)).
 
-Put all your code here. Use a separate folder for scripts based on the programming language. 
+- **`data/`**: Contains anonymized datasets for all experiments.
 
-#### experiments 
+- **`figures/`**: All figures used in the paper, generated using scripts in `code/R/`.
 
-The experiments folder is for the online (or in lab) experiments. Each experiment should be in its own folder. When you run another experiment, make sure to create a new folder (so that we always know what an experiment looked like when it was run). In readme file for the experiments folder, provide a brief summary of each experiment. Also note down any additional information that may not be saved within each experiment (e.g. how much the payment was for MTurk participants).
+- **`docs/`**: Contains a visualization of the analysis script in `code/R/`.
 
-### data 
+---
+<!-- 
+## 🚀 Getting Started
 
-Put your raw data files here. Any data wrangling to that file should happen in your code scripts. 
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/cause-and-fault.git
+   cd cause-and-fault
+   ```
+2. Install required dependencies for each language used in `code/`.
 
-### figures 
+3. Navigate to `code/` for experiment execution or analysis scripts:
+   - For data analysis:
+     ```bash
+     cd code/R
+     Rscript analysis_script.R
+     ```
+   - For experiment execution:
+     ```bash
+     cd code/experiments
+     python experiment1.py
+     ```
 
-Save all your figures here. You may want to include additional subfolder here such as `plots/`, `diagrams/` etc. 
+--- -->
 
-### papers 
+## 🧪 About the Experiments
 
-Put research papers here that are relevant for your project. 
+- Experiments involving **children** were conducted using **Lookit**.  
+- Pre-registrations for all experiments are accessible on the Open Science Framework (links provided in the [Repository Structure](#repository-structure)).
 
-### presentation
+---
+<!-- 
+## 🖼️ Figures
 
-Put your project presentation here (e.g. your keynote, powerpoint, google slides, or pdf file).
+All figures in the paper can be found in the `figures/` directory, generated using the analysis scripts in `code/R/`.
 
-### writeup 
+--- -->
 
-Put all your writing here. This folder structure is likely to expand for more complex projects. For example, you could add a subfolders like folders `journal/cognition/submission/`, `proceedings/cogsci/resubmission/` etc. 
-
-## CRediT author statement 
-
-Each public repository should have a [credit author statement](https://www.elsevier.com/authors/policies-and-guidelines/credit-author-statement) 
-
-| Term                       | Definition                                                                                                                                                                                                    |
-|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Conceptualization          | Ideas; formulation or evolution of overarching research goals and aims                                                                                                                                        |
-| Methodology                | Development or design of methodology; creation of models                                                                                                                                                      |
-| Software                   | Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components                                            |
-| Validation                 | Verification, whether as a part of the activity or separate, of the overall replication/ reproducibility of results/experiments and other research outputs                                                    |
-| Formal analysis            | Application of statistical, mathematical, computational, or other formal techniques to analyze or synthesize study data                                                                                       |
-| Investigation              | Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection                                                                                         |
-| Resources                  | Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools                                                       |
-| Data Curation              | Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse |
-| Writing - Original Draft   | Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation)                                                                   |
-| Writing - Review & Editing | Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre-or postpublication stages     |
-| Visualization              | Preparation, creation and/or presentation of the published work, specifically visualization/ data presentation                                                                                                |
-| Supervision                | Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team                                                                      |
-| Project administration     | Management and coordination responsibility for the research activity planning and execution                                                                                                                   |
-| Funding acquisition        | Acquisition of the financial support for the project leading to this publication                                                                                                                              |
-
-**Sample CRediT author statement**
-- Zhang San: Conceptualization, Methodology, Software 
-- Priya Singh: Data curation, Writing- Original draft preparation
-- Wang Wu: Visualization, Investigation 
-- Jan Jansen: Supervision 
-- Ajay Kumar: Software, Validation
-- Sun Qi: Writing-Reviewing and Editing
-
-
+Feel free to suggest additional improvements or features via issues or pull requests!
