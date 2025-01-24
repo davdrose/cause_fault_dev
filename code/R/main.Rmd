@@ -675,6 +675,7 @@ p3 = ggplot(mapping = aes(x = age_float,
 
 p3
 ```
+
 ## EXPERIMENT 2: ABSENCE CASES
 ### STATS
 #### Bayesian Models
