@@ -499,7 +499,7 @@ df.model = df.exp1_children %>%
   filter(age_float >= 4, age_float <= 9) %>%
   mutate(question = as_factor(question),
          question = fct_relevel(question, 
-                                "cause"),  # etc...
+                                "lexical", "fault", "cause"),  # etc...
          age_float = age_float - mean(age_float))
 # Check contrast values
  contrasts(df.model$question)
@@ -686,7 +686,7 @@ df.model = df.exp2_children %>%
   filter(age_float >= 4, age_float <= 9) %>%
   mutate(question = as_factor(question),
          question = fct_relevel(question, 
-                                "cause"),  # etc...
+                                "lexical", "fault", "cause"),  # etc...
          age_float = age_float - mean(age_float))
 
 # Check contrast values
