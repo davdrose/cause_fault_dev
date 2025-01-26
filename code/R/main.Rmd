@@ -1,6 +1,6 @@
 ---
-title: "Causal verbs and responsibility"
-author: "Cici Hou, David Rose & Ellen Markman"
+title: "Cause and fault in development"
+author: "David Rose*, Cici Hou*, Shaun Nichols, Tobias Gerstenberg & Ellen Markman"
 date: "`r Sys.time()`"
 output:
   bookdown::html_document2:
@@ -37,6 +37,9 @@ library("tidyverse")       # for everything else
 # set theme 
 theme_set(theme_classic())
 
+# sum coding
+options(contrasts = c("contr.sum","contr.poly"))
+
 # suppress grouping warning 
 options(dplyr.summarise.inform = F)
 ```
@@ -52,13 +55,6 @@ df.exp1_children = read_csv("../../data/exp1_child_clean.csv")
 df.exp1_children = df.exp1_children %>%
   select(scenario_order, gender_order, question, participant_age, age_float, distal, proximal, scenario, response_id, gender, lan_spoken)
 
-###check for duplicates####
-duplicates_check = df.exp1_children %>%
-  group_by(response_id) %>%
-  summarise(row_count = n()) %>%
-  filter(row_count != 6)
-
-print(duplicates_check)
 
 ```
 
@@ -67,6 +63,7 @@ print(duplicates_check)
 ### Demographics
 
 ```{r message=FALSE, warning=FALSE}
+
 # gender
 df.exp1_children %>%
   group_by(gender) %>%
@@ -85,6 +82,7 @@ df.exp1_children %>%
 
 ### Bayesian Model
 ```{r message=FALSE, warning=FALSE}
+
 df.exp1_children_different = df.exp1_children %>%
   mutate(response_pattern = case_when(
     distal == 1 & proximal == 1 ~ "both",
@@ -151,7 +149,7 @@ fit.brm.chain.children %>%
 
 ### Means and Confidence Interval  
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 
 df.exp1_children_new %>% 
   group_by(question) %>% 
@@ -248,20 +246,20 @@ p1 = ggplot(mapping = aes(x = age_float,
   scale_x_continuous(name = "Age",
                      breaks = 3:9,
                      labels = c("3", "4", "5", "6", "7", "8", "9")) +
-  theme(plot.title = element_text(hjust = 1),
-        axis.text.x = element_text(size = 16),
-        axis.text.y = element_text(size = 16),
-        axis.title.x = element_text(size = 16),
-        axis.title.y = element_text(size = 16),
+  labs(y = "Probability of selecting \n proximal or distal cause") +
+  theme(legend.position = "bottom",
         legend.title = element_blank(),
-        text = element_text(size = 20))
+        legend.text = element_text(size = 14),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 16),
+        axis.text.x = element_text(size = 12.5))
 
-p1
+
 ```
 
 ### Responses Patterns by Age
 
-```{r} 
+```{r message=FALSE, warning=FALSE}
 
 df.plot = df.exp1_children %>% 
   pivot_wider(names_from = question,
@@ -273,98 +271,134 @@ df.plot = df.exp1_children %>%
     cause == 0 & fault == 0 & lexical == 0 ~ "none",
     cause == 0 & fault == 0 & lexical == 1 ~ "lexical only",
     cause == 0 & fault == 1 & lexical == 0 ~ "fault only",
-    cause == 1 & fault == 0 & lexical == 0 ~ "cause only",
+    cause == 1 & fault == 0 & lexical == 0 ~ "caused only",
     cause == 0 & fault == 1 & lexical == 1 ~ "lexical + fault",
-    cause == 1 & fault == 0 & lexical == 1 ~ "lexical + cause",
-    cause == 1 & fault == 1 & lexical == 0 ~ "cause + fault",
-    cause == 1 & fault == 1 & lexical == 1 ~ "all"))
+    cause == 1 & fault == 0 & lexical == 1 ~ "caused + lexical",
+    cause == 1 & fault == 1 & lexical == 0 ~ "caused + fault",
+    cause == 1 & fault == 1 & lexical == 1 ~ "all"))  %>% 
+  group_by(participant_age, type, response_pattern) %>%
+  summarize(n = n()) %>%
+  ungroup() %>%
+  group_by(participant_age, type) %>%
+  mutate(percentage = n / sum(n) * 100) %>%
+  ungroup() %>%
+  mutate(type = factor(type, levels = c("proximal", "distal")),
+         response_pattern = factor(response_pattern, levels = c("caused only", "lexical only", "fault only", "caused + lexical", "caused + fault", "lexical + fault",  "all", "none")))
 
 
-###########STOPPED HERE###########
+df.labels = df.plot %>%
+  group_by(participant_age, type) %>%
+  summarize(count = sum(n)/2) %>%
+  ungroup() %>%
+  mutate(age = as.character(factor(participant_age,
+                                   levels = c(3, 4, 5, 6, 7, 8, 9),
+                                   labels = c("3", "4", "5", "6", "7", "8", "9"))),
+         count = ifelse(type == "proximal" & participant_age == 3, str_c("n=", count), count),
+         label = str_c("<span style='font-size:16px;'>", age, "</span>"),
+         label = ifelse(type == "proximal",
+                        str_c("<span style='font-size:16px;'>", age, "</span>", "<br>",
+                              "<span style='font-size:12px;'>(", count, ")", "</span>"), label),
+         type = factor(type, levels = c("proximal", "distal")))
 
-  
-  
-  
-  
 
 
-# df.plot = df.exp1_children %>% 
-#   mutate(response_pattern = case_when(
-#     distal == 1 & proximal == 1 ~ "both",
-#     distal == 0 & proximal == 0 ~ "neither",
-#     distal == 1 & proximal == 0  ~ "distal only",
-#     distal == 0 & proximal == 1  ~ "proximal only",
-#   ),
-#   question = recode(question, "cause" = "caused"),
-#   age_whole = as.factor(as.integer(age_float))) %>% 
-#   group_by(age_whole, question, response_pattern) %>% 
-#   summarize(n = n()) %>% 
-#   ungroup() %>%
-#   group_by(age_whole, question) %>%
-#   mutate(percentage = n / sum(n) * 100) %>%
-#   ungroup() %>% 
-#   mutate(question = factor(question, levels = c("caused", "fault", "lexical")),
-#          response_pattern = factor(response_pattern, levels = c("distal only", "proximal only", "both", "neither")))
-# 
-# 
-# df.labels = df.plot %>% 
-#   group_by(age_whole, question) %>%
-#   summarize(count = sum(n)/2) %>% 
-#   ungroup() %>% 
-#   mutate(age = as.character(factor(age_whole,
-#                                    levels = c(3, 4, 5, 6, 7, 8, 9),
-#                                    labels = c("3", "4", "5", "6", "7", "8", "9"))),
-#          count = ifelse(question == "lexical" & age_whole == 3, str_c("n=", count), count),
-#          label = str_c("<span style='font-size:16px;'>", age, "</span>"),
-#          label = ifelse(question == "lexical", 
-#                         str_c("<span style='font-size:16px;'>", age, "</span>", "<br>",
-#                               "<span style='font-size:12px;'>(", count, ")", "</span>"), label),
-#          question = factor(question, levels = c("caused", "fault", "lexical")))
-# 
-# df.plot = df.plot %>% 
-#   left_join(df.labels %>% 
-#               select(age_whole, question, label), 
-#             by = c("age_whole", "question")) %>% 
-#   mutate(label = factor(label, levels = df.labels$label))
-# 
-# 
-# p2 = ggplot(data = df.plot,
-#             mapping = aes(x = label,
-#                           y = percentage,
-#                           group = response_pattern,
-#                           color = response_pattern,
-#                           fill = response_pattern)) +
-#   geom_col(color = "black") +
-#   facet_wrap(~question, 
-#              scales = "free_x") + 
-#   scale_fill_manual(values = c("distal only" = "#FF7F00",
-#                                "proximal only" = "#FFFF33",
-#                                "both" = "#984EA3",
-#                                "neither" = "#999999")) +
-#   scale_color_manual(values = c("distal only" = "#FF7F00",
-#                                 "proximal only" = "#FFFF33",
-#                                 "both" = "#984EA3",
-#                                 "neither" = "#999999")) +
-#   scale_shape_manual(values = c(21, 23)) +
-#   scale_y_continuous(breaks = seq(0, 100, 25),
-#                      labels = str_c(seq(0, 100, 25), "%"),
-#                      expand = expansion(add = c(0, 0))) +
-#   scale_x_discrete(expand = expansion(add = c(0, 0))) +
-#   coord_cartesian(clip = "off") +
-#   labs(y = "Response pattern \n\ probability") +
-#   theme(legend.position = "bottom",
-#         legend.title = element_blank(),
-#         legend.text = element_text(size = 14),
-#         axis.text.y = element_text(size = 12),
-#         axis.title.y = element_text(size = 16),
-#         axis.text.x = element_markdown(),
-#         axis.title.x = element_blank(),
-#         strip.background = element_blank(),
-#         strip.text = element_blank(),
-#         panel.spacing = unit(.4, "cm"))
-# 
-# p2
+df.plot = df.plot %>%
+  left_join(df.labels %>%
+              select(participant_age, type, label),
+            by = c("participant_age", "type")) %>%
+  mutate(label = factor(label, levels = df.labels$label))
 
+
+
+p2 = ggplot(data = df.plot,
+            mapping = aes(x = label,
+                          y = percentage,
+                          group = response_pattern,
+                          color = response_pattern,
+                          fill = response_pattern)) +
+  geom_col(color = "black") +
+  facet_wrap(~type,
+             scales = "free_x") +
+    scale_fill_manual(values = c("caused only" = "#dc3410",
+                               "fault only" = "#4DAF4A",
+                               "lexical only" = "#377EB8",
+                               "caused + fault" = "#A0522D",
+                               "lexical + fault" = "#40E0D0",
+                               "caused + lexical" = "#800080",
+                               "all" = "#FFFFFF",
+                               "none" = "#000000")) +
+  scale_color_manual(values = c("caused only" = "#dc3410",
+                               "fault only" = "#4DAF4A",
+                               "lexical only" = "#377EB8",
+                               "caused + fault" = "#A0522D",
+                               "lexical + fault" = "#40E0D0",
+                               "caused + lexical" = "#800080",
+                               "all" = "#FFFFFF")) +
+  # scale_fill_manual(values = c("caused only" = "#FF7F00",
+  #                              "fault only" = "#800080",
+  #                              "lexical only" = "#FFFF33",
+  #                              "caused + fault" = "#CC527A",
+  #                              "lexical + fault" = "#C66900",
+  #                              "caused + lexical" = "#FFB74D",
+  #                              "all" = "#A0522D",
+  #                              "none" = "#999999")) +
+  # scale_color_manual(values = c("caused only" = "#FF7F00",
+  #                              "fault only" = "#800080",
+  #                              "lexical only" = "#FFFF33",
+  #                              "caused + fault" = "#CC527A",
+  #                              "lexical + fault" = "#C66900",
+  #                              "caused + lexical" = "#FFB74D",
+  #                              "all" = "#A0522D",
+  #                              "none" = "#999999")) +
+  scale_shape_manual(values = c(21, 23)) +
+  scale_y_continuous(breaks = seq(0, 100, 25),
+                     labels = str_c(seq(0, 100, 25), "%"),
+                     expand = expansion(add = c(0, 0))) +
+  scale_x_discrete(expand = expansion(add = c(0, 0))) +
+  coord_cartesian(clip = "off") +
+  labs(y = "Response pattern \n\ probability") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank(),
+        legend.text = element_text(size = 14),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 16),
+        axis.text.x = element_markdown(),
+        axis.title.x = element_blank(),
+        strip.background = element_blank(),
+        strip.text = element_text(size = 16),
+        panel.spacing = unit(.4, "cm")) +
+ guides(fill = guide_legend(order = 1, nrow = 2, byrow = TRUE,
+                             override.aes = list(order = c(1, 3, 2, 6, 4, 5, 7, 8))),
+         color = guide_legend(order = 1, nrow = 2, byrow = TRUE,
+                              override.aes = list(order = c(1, 3, 2, 6, 4, 5, 7, 8))))
+
+p2
+
+
+```
+
+### Combine Plots
+
+```{r fig.height=5.5, fig.width=13, message=FALSE, warning=FALSE}
+
+design = "
+122
+"    
+
+plot = wrap_plots(
+  A = p1,
+  B = p2,
+  design = design
+) + 
+  plot_annotation(tag_levels = "A") &
+  theme(plot.tag = element_text(face = "bold",
+                                size = 20))
+
+
+ggsave(plot, filename = "../../figures/experiment1/exp1_plot.pdf", height = 5.5, width = 13)
+
+
+plot
 
 ```
 
@@ -374,7 +408,8 @@ df.plot = df.exp1_children %>%
 # EXPERIMENT 2: ABSENCE CASES
 ## DATA
 ### Read in data
-```{r}
+```{r message=FALSE, warning=FALSE}
+
 df.exp2_children = read_csv("../../data/exp2_child_clean.csv") 
 
 df.exp2_children = df.exp2_children %>%
@@ -390,6 +425,7 @@ print(duplicates_check)
 ### Demographics
 
 ```{r message=FALSE, warning=FALSE}
+
 # gender
 df.exp2_children %>%
   group_by(gender) %>%
@@ -408,6 +444,7 @@ df.exp2_children %>%
 
 ### Bayesian Model
 ```{r message=FALSE, warning=FALSE}
+
 df.exp2_children_different = df.exp2_children %>%
   mutate(response_pattern = case_when(
     absent == 1 & direct == 1 ~ "both",
@@ -458,16 +495,16 @@ fit.brm.absence.children
 
 ### Follow-up analysis 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 # effect of question 
 fit.brm.absence.children %>% 
   emmeans(spec = pairwise ~ question, 
           type = "response")
-# 
-# # effect of age
-# fit.brm.absence.children %>%
-#   avg_slopes(variable = "age_float",
-#              type = "link")
+
+# effect of age
+fit.brm.absence.children %>%
+  avg_slopes(variable = "age_float",
+             type = "link")
   
 # interaction effect 
 fit.brm.absence.children %>% 
@@ -477,7 +514,7 @@ fit.brm.absence.children %>%
 
 ### Means and Confidence Interval  
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 
 df.exp2_children_new %>% 
   group_by(question) %>% 
@@ -492,7 +529,7 @@ df.exp2_children_new %>%
 ## PLOTS
 ### Overall Responses by Age
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 
 df.model = df.exp2_children_new %>%
   mutate(difference = absent - direct,
@@ -580,7 +617,8 @@ p3 = ggplot(mapping = aes(x = age_float,
         legend.title = element_blank(),
         legend.text = element_text(size = 14),
         axis.text.y = element_text(size = 12),
-        axis.title.y = element_text(size = 16))
+        axis.title.y = element_text(size = 16),
+        axis.text.x = element_text(size = 12.5))
 
 ```
 
@@ -699,8 +737,6 @@ p4 = ggplot(data = df.plot,
          color = guide_legend(order = 1, nrow = 2, byrow = TRUE,
                               override.aes = list(order = c(1, 3, 2, 6, 4, 5, 7, 8))))
 
-p4
-
 ```
 
 ### Combine Plots
@@ -717,7 +753,8 @@ plot = wrap_plots(
   design = design
 ) + 
   plot_annotation(tag_levels = "A") &
-  theme(plot.tag = element_text(face = "bold"))
+  theme(plot.tag = element_text(face = "bold",
+                                size = 20))
 
 
 ggsave(plot, filename = "../../figures/experiment2/exp2_plot.pdf", height = 5.5, width = 13)
@@ -732,15 +769,20 @@ plot
 ### STATS
 #### Bayesian Models
 ##### Distal
+###### Question Only
 
 ```{r message=FALSE, warning=FALSE}
 
+# dummy coding
+options(contrasts = c("contr.treatment", "contr.poly"))
+
+
 df.model = df.exp1_children %>% 
-  filter(age_float >= 4, age_float <= 9) %>%
+  filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
   mutate(question = as_factor(question),
          question = fct_relevel(question, 
-                                "lexical", "fault", "cause"),  # etc...
-         age_float = age_float - mean(age_float))
+                                "lexical"))
 # Check contrast values
  contrasts(df.model$question)
 
@@ -751,48 +793,84 @@ fit.brm.cause.children.distal = brm(formula = distal ~ 1 + question + (1 | respo
                      seed = 1,
                      iter = 4000,
                      warmup = 1000,
-                     control = list(adapt_delta = .999999),
                      file = "cache/cause_children_distal") 
 
 fit.brm.cause.children.distal
 
 
-fit.brm.cause.children.distal.age = brm(formula = distal ~ 1 + question*age_float + (1 | response_id) + (1 | scenario), 
+```
+
+
+###### Question by Age
+```{r message=FALSE, warning=FALSE}
+
+df.model = df.exp1_children %>% 
+  filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
+  mutate(question = as_factor(question),
+         question = fct_relevel(question, 
+                                "lexical"))
+# Check contrast values
+ contrasts(df.model$question)
+ 
+ # removed randmon intercept for scenario to prevent divergent transitions
+fit.brm.cause.children.distal.age = brm(formula = distal ~ 1 + question*age_float + (1 | response_id), 
                      data = df.model,
                      family = "bernoulli",
                      seed = 1,
                      iter = 4000,
                      warmup = 1000,
-                     control = list(adapt_delta = .999999),
                      file = "cache/cause_children_distal_age") 
 
 fit.brm.cause.children.distal.age 
 
+
 ```
 
 ##### Proximal
+###### Question Only
 ```{r message=FALSE, warning=FALSE}
 
-# removed random intercepts for scenario to avoid divergent transition errors
-fit.brm.cause.children.proximal = brm(formula = proximal ~ 1 + question + (1 | response_id),
+df.model = df.exp1_children %>% 
+  filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
+  mutate(question = as_factor(question),
+         question = fct_relevel(question, 
+                                "lexical"))
+# Check contrast values
+ contrasts(df.model$question)
+ 
+fit.brm.cause.children.proximal = brm(formula = proximal ~ 1 + question + (1 | response_id) + + (1 | scenario),
                       data = df.model,
                       family = "bernoulli",
                       seed = 1,
                       iter = 4000,
                       warmup = 1000,
-                      control = list(adapt_delta = .999999),
                       file = "cache/cause_children_proximal") 
 
 fit.brm.cause.children.proximal
 
 
+```
+
+###### Question by Age
+```{r message=FALSE, warning=FALSE}
+
+df.model = df.exp1_children %>% 
+  filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
+  mutate(question = as_factor(question),
+         question = fct_relevel(question, 
+                                "lexical"))
+# Check contrast values
+ contrasts(df.model$question)
+ 
 fit.brm.cause.children.proximal.age = brm(formula = proximal ~ 1 + question*age_float + (1 | response_id) + (1 | scenario),
                       data = df.model,
                       family = "bernoulli",
                       seed = 1,
                       iter = 4000,
                       warmup = 1000,
-                      control = list(adapt_delta = .999999),
                       file = "cache/cause_children_proximal_age") 
 
 fit.brm.cause.children.proximal.age
@@ -801,45 +879,21 @@ fit.brm.cause.children.proximal.age
 ```
 
 ### PLOTS
-#### Caused vs. Lexical vs. Fault
-```{r message=FALSE, warning=FALSE}
+#### Caused vs. Lexical
+```{r fig.height=5, fig.width=8, message=FALSE, warning=FALSE}
 
-df.model = df.exp1_children %>% 
-  filter(age_float >= 4, age_float <= 9) %>%
-  mutate(question = as_factor(question),
-         question = fct_relevel(question, 
-                               "lexical"))
-
-fit.brm.distal.cause.age2 = brm(formula = distal ~ 1 + question*age_float + (1 | response_id) + (1 | scenario),
-                     data = df.model,
-                     family = "bernoulli",
-                     seed = 1,
-                     iter = 4000,
-                     warmup = 1000,
-                     control = list(adapt_delta = .9999),
-                     file = "cache/fit.brm.distal.cause.age2")
-
-
-fit.brm.proximal.cause.age2 = brm(formula = proximal ~ 1 + question*age_float + (1 | response_id) + (1 | scenario), 
-                     data = df.model,
-                     family = "bernoulli",
-                     seed = 1,
-                     iter = 6000,
-                     warmup = 1000,
-                     control = list(adapt_delta = .9999),
-                     file = "cache/fit.brm.proximal.cause.age2")
 
 df.data = expand_grid(age_float = seq(4, 9, 0.1),
-                      question = c("fault", "cause", "lexical"))
+                      question = c("cause", "lexical"))
 
-df.prediction = fit.brm.distal.cause.age2 %>% 
+df.prediction = fit.brm.cause.children.distal.age %>% 
   fitted(newdata = df.data,
          re_formula = NA,
           probs = c(0.1, 0.9)) %>% 
   as_tibble() %>% 
   bind_cols(df.data) %>% 
   mutate(type = "distal") %>% 
-  bind_rows(fit.brm.proximal.cause.age2 %>% 
+  bind_rows(fit.brm.cause.children.proximal.age %>% 
               fitted(newdata = df.data,
                      re_formula = NA,
                      probs = c(0.1, 0.9)) %>% 
@@ -849,6 +903,8 @@ df.prediction = fit.brm.distal.cause.age2 %>%
   clean_names()
 
 df.children = df.exp1_children %>% 
+  filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
   pivot_longer(cols = distal:proximal,
                names_to = "type",
                values_to = "response")
@@ -868,11 +924,11 @@ df.means = df.children %>%
   mutate(participant_age = as.numeric(as.character(participant_age)))
 
 df.means = df.means %>%
-  mutate(question = factor(question, levels = c("cause", "lexical", "fault")))
+  mutate(question = factor(question, levels = c("cause", "lexical")))
 
 custom_labels = as_labeller(c("distal" = "Distal Cause", "proximal" = "Proximal Cause"))
 
-p3 = ggplot(mapping = aes(x = age_float, 
+ggplot(mapping = aes(x = age_float, 
                      y = response,
                      color = question)) + 
   geom_hline(yintercept=0.50, linetype="dashed", color = "black") +
@@ -899,51 +955,45 @@ p3 = ggplot(mapping = aes(x = age_float,
                   position = position_dodge(width = 0.5)) +
     facet_wrap(~type,
              labeller = custom_labels) + 
-  scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), 
-                    breaks=c("cause", "lexical", "fault")) +
-  scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), 
-                     breaks=c("cause", "lexical", "fault")) +
-  scale_shape_manual(values = c(23, 21, 24)) +
+  scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8"), 
+                    breaks=c("cause", "lexical")) +
+  scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8"), 
+                     breaks=c("cause", "lexical")) +
+  scale_shape_manual(values = c(23, 21)) +
   scale_y_continuous(breaks = seq(0, 1, 0.25),
                       labels = str_c(seq(0, 1, 0.25) * 100, "%")) +
-  scale_x_continuous(breaks = 4:9,
+  scale_x_continuous(name = "Age",
+                     breaks = 4:9,
                      labels = c("4", "5", "6", "7", "8", "9")) +
   labs(y = "Probability of selecting \n causal candidate") +
   theme(legend.position = "bottom",
         legend.title = element_blank(),
-        text = element_text(size = 18)) 
+        legend.text = element_text(size = 14),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 16),
+        axis.text.x = element_text(size = 12.5),
+        strip.text = element_text(size = 16))
 
-p3
+ggsave(filename = "../../figures/appendix/exp1_plot.pdf", height = 5, width = 8)
 ```
 
 ## EXPERIMENT 2: ABSENCE CASES
 ### STATS
 #### Bayesian Models
 ##### Absent
+###### Question by Age
 
 ```{r message=FALSE, warning=FALSE}
 
 df.model = df.exp2_children %>% 
-  filter(age_float >= 4, age_float <= 9) %>%
+ filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
   mutate(question = as_factor(question),
          question = fct_relevel(question, 
-                                "lexical", "fault", "cause"),  # etc...
-         age_float = age_float - mean(age_float))
+                                "lexical"))
 
 # Check contrast values
  contrasts(df.model$question)
-
-
-fit.brm.cause.children.absent = brm(formula = absent ~ 1 + question + (1 | response_id) + (1 | scenario),
-                     data = df.model,
-                     family = "bernoulli",
-                     seed = 1,
-                     iter = 4000,
-                     warmup = 1000,
-                     control = list(adapt_delta = .999999),
-                     file = "cache/cause_children_absent") 
-
-fit.brm.cause.children.absent
 
 
 fit.brm.cause.children.absent.age = brm(formula = absent ~ 1 + question*age_float + (1 | response_id) + (1 | scenario), 
@@ -952,7 +1002,6 @@ fit.brm.cause.children.absent.age = brm(formula = absent ~ 1 + question*age_floa
                      seed = 1,
                      iter = 4000,
                      warmup = 1000,
-                     control = list(adapt_delta = .999999),
                      file = "cache/cause_children_absent_age") 
 
 fit.brm.cause.children.absent.age 
@@ -960,20 +1009,20 @@ fit.brm.cause.children.absent.age
 ```
 
 ##### Direct
+###### Question by Age
+
 ```{r message=FALSE, warning=FALSE}
 
-# removed random intercepts for scenario to avoid divergent transition errors
-fit.brm.cause.children.direct = brm(formula = direct ~ 1 + question + (1 | response_id),
-                      data = df.model,
-                      family = "bernoulli",
-                      seed = 1,
-                      iter = 4000,
-                      warmup = 1000,
-                      control = list(adapt_delta = .999999),
-                      file = "cache/cause_children_direct") 
 
-fit.brm.cause.children.direct
+df.model = df.exp2_children %>% 
+ filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
+  mutate(question = as_factor(question),
+         question = fct_relevel(question, 
+                                "lexical"))
 
+# Check contrast values
+ contrasts(df.model$question)
 
 fit.brm.cause.children.direct.age = brm(formula = direct ~ 1 + question*age_float + (1 | response_id) + (1 | scenario),
                       data = df.model,
@@ -981,7 +1030,6 @@ fit.brm.cause.children.direct.age = brm(formula = direct ~ 1 + question*age_floa
                       seed = 1,
                       iter = 4000,
                       warmup = 1000,
-                      control = list(adapt_delta = .999999),
                       file = "cache/cause_children_direct_age") 
 
 fit.brm.cause.children.direct.age
@@ -990,45 +1038,22 @@ fit.brm.cause.children.direct.age
 ```
 
 ### PLOTS
-#### Caused vs. Lexical vs. Fault
-```{r message=FALSE, warning=FALSE}
-
-df.model = df.exp2_children %>% 
-  filter(age_float >= 4, age_float <= 9) %>%
-  mutate(question = as_factor(question),
-         question = fct_relevel(question, 
-                               "lexical"))
-
-fit.brm.absent.cause.age2 = brm(formula = absent ~ 1 + question*age_float + (1 | response_id) + (1 | scenario),
-                     data = df.model,
-                     family = "bernoulli",
-                     seed = 1,
-                     iter = 4000,
-                     warmup = 1000,
-                     control = list(adapt_delta = .9999),
-                     file = "cache/fit.brm.absent.cause.age2")
+#### Caused vs. Lexical
+```{r fig.height=5, fig.width=8, message=FALSE, warning=FALSE}
 
 
-fit.brm.direct.cause.age2 = brm(formula = direct ~ 1 + question*age_float + (1 | response_id) + (1 | scenario), 
-                     data = df.model,
-                     family = "bernoulli",
-                     seed = 1,
-                     iter = 6000,
-                     warmup = 1000,
-                     control = list(adapt_delta = .9999),
-                     file = "cache/fit.brm.direct.cause.age2")
 
 df.data = expand_grid(age_float = seq(3, 9, 0.1),
-                      question = c("fault", "cause", "lexical"))
+                      question = c("cause", "lexical"))
 
-df.prediction = fit.brm.absent.cause.age2 %>% 
+df.prediction = fit.brm.cause.children.absent.age  %>% 
   fitted(newdata = df.data,
          re_formula = NA,
           probs = c(0.1, 0.9)) %>% 
   as_tibble() %>% 
   bind_cols(df.data) %>% 
   mutate(type = "absent") %>% 
-  bind_rows(fit.brm.direct.cause.age2 %>% 
+  bind_rows(fit.brm.cause.children.direct.age  %>% 
               fitted(newdata = df.data,
                      re_formula = NA,
                      probs = c(0.1, 0.9)) %>% 
@@ -1038,14 +1063,16 @@ df.prediction = fit.brm.absent.cause.age2 %>%
   clean_names()
 
 df.children = df.exp2_children %>% 
+   filter(age_float >= 4, age_float <= 10,
+         question != "fault") %>%
   pivot_longer(cols = absent:direct,
                names_to = "type",
                values_to = "response")
 
 df.means = df.children %>% 
   mutate(participant_age = factor(participant_age, 
-                            levels = c(3, 4, 5, 6, 7, 8, 9), 
-                            labels = c("3", "4", "5", "6", "7", "8", "9")),
+                            levels = c(4, 5, 6, 7, 8, 9), 
+                            labels = c("4", "5", "6", "7", "8", "9")),
          question = recode(question, "cause" = "cause")) %>% 
   group_by(participant_age, question, type) %>% 
   summarize(
@@ -1057,11 +1084,11 @@ df.means = df.children %>%
   mutate(participant_age = as.numeric(as.character(participant_age)))
 
 df.means = df.means %>%
-  mutate(question = factor(question, levels = c("cause", "lexical", "fault")))
+  mutate(question = factor(question, levels = c("cause", "lexical")))
 
 custom_labels = as_labeller(c("absent" = "Absent Cause", "direct" = "Direct Cause"))
 
-p4 = ggplot(mapping = aes(x = age_float, 
+ggplot(mapping = aes(x = age_float, 
                      y = response,
                      color = question)) + 
   geom_hline(yintercept=0.50, linetype="dashed", color = "black") +
@@ -1088,21 +1115,28 @@ p4 = ggplot(mapping = aes(x = age_float,
                   position = position_dodge(width = 0.5)) +
     facet_wrap(~type,
              labeller = custom_labels) + 
-  scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), 
-                    breaks=c("cause", "lexical", "fault")) +
-  scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), 
-                     breaks=c("cause", "lexical", "fault")) +
-  scale_shape_manual(values = c(23, 21, 24)) +
+  scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8"), 
+                    breaks=c("cause", "lexical")) +
+  scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8"), 
+                     breaks=c("cause", "lexical")) +
+  scale_shape_manual(values = c(23, 21)) +
   scale_y_continuous(breaks = seq(0, 1, 0.25),
                       labels = str_c(seq(0, 1, 0.25) * 100, "%")) +
-  scale_x_continuous(breaks = 3:9,
-                     labels = c("3", "4", "5", "6", "7", "8", "9")) +
+  scale_x_continuous(name = "Age",
+                     breaks = 4:9,
+                     labels = c("4", "5", "6", "7", "8", "9")) +
   labs(y = "Probability of selecting \n causal candidate") +
   theme(legend.position = "bottom",
         legend.title = element_blank(),
-        text = element_text(size = 18)) 
+        legend.text = element_text(size = 14),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 16),
+        axis.text.x = element_text(size = 12.5),
+        strip.text = element_text(size = 16))
 
-p4
+ggsave(filename = "../../figures/appendix/exp2_plot.pdf", height = 5, width = 8) 
+
+
 ```
 
 
