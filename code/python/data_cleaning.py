@@ -80,9 +80,9 @@ def remove_blank_data(csv_file, column):
 # Main script
 if __name__ == "__main__":
     # File paths and column to process
-    csv_file = "data/exp2_child.csv"
+    csv_file = "data/exp1_child.csv"
     column = "full_response"
-    output_file = "data/exp2_child_clean.csv"
+    output_file = "data/exp1_child_clean.csv"
     
     # Clean and process data
     remove_blank_data(csv_file, column)

@@ -383,12 +383,12 @@ participant_age,participant_number,response_id,response__uuid,age_range,rounded_
 5,3,231799,d3c1fa20-84e8-4491-b43c-ea3c3ea1bb43,1826-2191,2130,5.8356,m,en,fence_first,fault_second,cause_second,boy,lexical,sophia
 5,3,231799,d3c1fa20-84e8-4491-b43c-ea3c3ea1bb43,1826-2191,2130,5.8356,m,en,fence_first,fault_second,cause_second,boy,cause,bobby
 5,3,231799,d3c1fa20-84e8-4491-b43c-ea3c3ea1bb43,1826-2191,2130,5.8356,m,en,fence_first,fault_second,cause_second,boy,fault,bobby
-5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6.0,m,en,fence_second,fault_second,cause_first,boy,cause,the boy
-5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6.0,m,en,fence_second,fault_second,cause_first,boy,lexical,sophia
-5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6.0,m,en,fence_second,fault_second,cause_first,boy,fault,the boy
-5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6.0,m,en,fence_second,fault_second,cause_first,girl,cause,the girl
-5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6.0,m,en,fence_second,fault_second,cause_first,girl,lexical,the boy
-5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6.0,m,en,fence_second,fault_second,cause_first,girl,fault,the girl
+5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6,m,en,fence_second,fault_second,cause_first,boy,cause,the boy
+5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6,m,en,fence_second,fault_second,cause_first,boy,lexical,sophia
+5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6,m,en,fence_second,fault_second,cause_first,boy,fault,the boy
+5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6,m,en,fence_second,fault_second,cause_first,girl,cause,the girl
+5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6,m,en,fence_second,fault_second,cause_first,girl,lexical,the boy
+5,4,232130,954578c8-427a-41c8-9c76-f5babe17c6ca,1826-2191,2190,6,m,en,fence_second,fault_second,cause_first,girl,fault,the girl
 5,5,232226,f35bf358-d0c4-4817-befa-ccd2bfa052a1,1826-2191,1950,5.3425,f,en cmn,fence_second,fault_second,cause_second,girl,lexical,bobby
 5,5,232226,f35bf358-d0c4-4817-befa-ccd2bfa052a1,1826-2191,1950,5.3425,f,en cmn,fence_second,fault_second,cause_second,girl,cause,sophia
 5,5,232226,f35bf358-d0c4-4817-befa-ccd2bfa052a1,1826-2191,1950,5.3425,f,en cmn,fence_second,fault_second,cause_second,girl,fault,sophia
@@ -485,12 +485,12 @@ participant_age,participant_number,response_id,response__uuid,age_range,rounded_
 5,20,234789,d2dc92ff-96bd-4846-a9db-2ee61bf0fa3c,1826-2191,2070,5.6712,f,en es,fence_first,fault_second,cause_first,boy,cause,bobby
 5,20,234789,d2dc92ff-96bd-4846-a9db-2ee61bf0fa3c,1826-2191,2070,5.6712,f,en es,fence_first,fault_second,cause_first,boy,lexical,sophia
 5,20,234789,d2dc92ff-96bd-4846-a9db-2ee61bf0fa3c,1826-2191,2070,5.6712,f,en es,fence_first,fault_second,cause_first,boy,fault,bobby's
-5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6.0,m,en ro so tr,fence_second,fault_second,cause_first,girl,cause,sophia
-5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6.0,m,en ro so tr,fence_second,fault_second,cause_first,girl,lexical,bobby
-5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6.0,m,en ro so tr,fence_second,fault_second,cause_first,girl,fault,sophia
-5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6.0,m,en ro so tr,fence_second,fault_second,cause_first,boy,cause,andy and suzy
-5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6.0,m,en ro so tr,fence_second,fault_second,cause_first,boy,lexical,suzy
-5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6.0,m,en ro so tr,fence_second,fault_second,cause_first,boy,fault,andy
+5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6,m,en ro so tr,fence_second,fault_second,cause_first,girl,cause,sophia
+5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6,m,en ro so tr,fence_second,fault_second,cause_first,girl,lexical,bobby
+5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6,m,en ro so tr,fence_second,fault_second,cause_first,girl,fault,sophia
+5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6,m,en ro so tr,fence_second,fault_second,cause_first,boy,cause,andy and suzy
+5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6,m,en ro so tr,fence_second,fault_second,cause_first,boy,lexical,suzy
+5,21,235105,195eee21-2453-405b-893d-357e53c23b07,1826-2191,2190,6,m,en ro so tr,fence_second,fault_second,cause_first,boy,fault,andy
 5,22,235897,688a8d78-9482-4203-b66d-627e83230fde,1826-2191,2100,5.7534,f,en es,fence_second,fault_second,cause_second,girl,lexical,bobby
 5,22,235897,688a8d78-9482-4203-b66d-627e83230fde,1826-2191,2100,5.7534,f,en es,fence_second,fault_second,cause_second,girl,cause,sophia
 5,22,235897,688a8d78-9482-4203-b66d-627e83230fde,1826-2191,2100,5.7534,f,en es,fence_second,fault_second,cause_second,girl,fault,sophia
@@ -1313,6 +1313,7 @@ participant_age,participant_number,response_id,response__uuid,age_range,rounded_
 9,33,239132,4495d903-0eb0-4057-99b9-1ad525565db7,3287-3652,3570,9.7808,f,en,fence_first,fault_second,cause_first,girl,cause,sophia's
 9,33,239132,4495d903-0eb0-4057-99b9-1ad525565db7,3287-3652,3570,9.7808,f,en,fence_first,fault_second,cause_first,girl,lexical,bobby
 9,33,239132,4495d903-0eb0-4057-99b9-1ad525565db7,3287-3652,3570,9.7808,f,en,fence_first,fault_second,cause_first,girl,fault,sophia
+participant_age,participant_number,response_id,response__uuid,age_range,rounded_age,age_float,gender,lan_spoken,scenario_order,fault_order,cause_order,gender_order,question,full_response
 3,1,242358,32e3fda2-1d6e-43df-9567-72d306b6fe34,1095-1460,1110,3.0411,m,en,fence_first,fault_first,cause_first,boy,fault,suzy
 3,1,242358,32e3fda2-1d6e-43df-9567-72d306b6fe34,1095-1460,1110,3.0411,m,en,fence_first,fault_first,cause_first,boy,cause,andy
 3,1,242358,32e3fda2-1d6e-43df-9567-72d306b6fe34,1095-1460,1110,3.0411,m,en,fence_first,fault_first,cause_first,boy,lexical,suzy
@@ -1835,12 +1836,12 @@ participant_age,participant_number,response_id,response__uuid,age_range,rounded_
 5,31,261655,e756af69-10d6-4404-9fd7-78ecdecc493a,1826-2191,2130,5.8356,f,en,fence_second,fault_first,cause_second,girl,fault,andy
 5,31,261655,e756af69-10d6-4404-9fd7-78ecdecc493a,1826-2191,2130,5.8356,f,en,fence_second,fault_first,cause_second,girl,lexical,suzy
 5,31,261655,e756af69-10d6-4404-9fd7-78ecdecc493a,1826-2191,2130,5.8356,f,en,fence_second,fault_first,cause_second,girl,cause,suzy
-5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6.0,f,en ml,fence_second,fault_first,cause_second,boy,fault,bobby
-5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6.0,f,en ml,fence_second,fault_first,cause_second,boy,lexical,sophia
-5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6.0,f,en ml,fence_second,fault_first,cause_second,boy,cause,bobby
-5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6.0,f,en ml,fence_second,fault_first,cause_second,girl,fault,suzy
-5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6.0,f,en ml,fence_second,fault_first,cause_second,girl,lexical,andy
-5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6.0,f,en ml,fence_second,fault_first,cause_second,girl,cause,suzy
+5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6,f,en ml,fence_second,fault_first,cause_second,boy,fault,bobby
+5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6,f,en ml,fence_second,fault_first,cause_second,boy,lexical,sophia
+5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6,f,en ml,fence_second,fault_first,cause_second,boy,cause,bobby
+5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6,f,en ml,fence_second,fault_first,cause_second,girl,fault,suzy
+5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6,f,en ml,fence_second,fault_first,cause_second,girl,lexical,andy
+5,32,270155,1dc097e9-077e-4fa8-bc54-a19792eb9503,1826-2191,2190,6,f,en ml,fence_second,fault_first,cause_second,girl,cause,suzy
 6,1,242877,b96dd36e-cb4c-4165-a115-2726e72c1905,2191-2556,2220,6.0822,m,en,fence_second,fault_first,cause_second,girl,fault,bobby
 6,1,242877,b96dd36e-cb4c-4165-a115-2726e72c1905,2191-2556,2220,6.0822,m,en,fence_second,fault_first,cause_second,girl,lexical,bobby
 6,1,242877,b96dd36e-cb4c-4165-a115-2726e72c1905,2191-2556,2220,6.0822,m,en,fence_second,fault_first,cause_second,girl,cause,bobby
@@ -2189,297 +2190,111 @@ participant_age,participant_number,response_id,response__uuid,age_range,rounded_
 8,15,242517,d9168361-6760-4834-b7c7-570d9281704f,2921-3287,3270,8.9589,f,en,fence_second,fault_first,cause_second,boy,fault,andy
 8,15,242517,d9168361-6760-4834-b7c7-570d9281704f,2921-3287,3270,8.9589,f,en,fence_second,fault_first,cause_second,boy,lexical,suzy
 8,15,242517,d9168361-6760-4834-b7c7-570d9281704f,2921-3287,3270,8.9589,f,en,fence_second,fault_first,cause_second,boy,cause,andy
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,fault,bobby
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,fault,suzy
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,cause,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,fault,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,cause,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,fault,nobody
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,cause,andy
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,lexical,suzy
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,fault,nobody
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,fault,andy
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,cause,andy
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,lexical,andy
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,fault,sophia
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,cause,bobby
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,fault,sophia
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,cause,sophia
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,lexical,bobby
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,fault,andy
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,cause,andy
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,lexical,suzy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,fault,bobby
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,lexical,sophia
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,cause,bobby
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,fault,suzy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,lexical,andy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,cause,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,fault,andy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,lexical,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,cause,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,fault,sophia
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,lexical,bobby
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,cause,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,fault,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,cause,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,fault,suzy
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,cause,suzy
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,lexical,andy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,fault,bobby
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,cause,bobby
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,fault,suzy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,cause,suzy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,lexical,andy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,cause,suzy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,fault,bobby
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,cause,bobby
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,fault,sophia
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,cause,bobby
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,fault,andy
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,cause,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,fault,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,lexical,andy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,cause,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,fault,bobby
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,lexical,sophia
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,cause,bobby
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,fault,both
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,fault,both
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,fault,suzy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,lexical,andy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,cause,andy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,fault,bobby
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,lexical,sophia
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,cause,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,fault,bobby
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,cause,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,fault,andy
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,cause,andy
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,lexical,suzy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,fault,andy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,cause,suzy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,lexical,both
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,fault,sophia
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,fault,andy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,lexical,suzy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,cause,suzy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,fault,sophia
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,lexical,bobby
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,cause,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,fault,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,cause,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,fault,andy
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,cause,andy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,fault,bobby
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,lexical,sophia
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,cause,bobby
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,fault,suzy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,lexical,andy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,cause,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,fault,andy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,lexical,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,cause,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,fault,sophia
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,lexical,bobby
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,cause,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,fault,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,cause,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,fault,suzy
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,cause,suzy
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,lexical,andy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,fault,bobby
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,cause,bobby
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,fault,suzy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,cause,suzy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,lexical,andy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,cause,suzy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,fault,bobby
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,cause,bobby
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,fault,sophia
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,cause,bobby
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,fault,andy
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,cause,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,fault,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,lexical,andy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,cause,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,fault,bobby
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,lexical,sophia
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,cause,bobby
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,fault,both
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,fault,both
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,fault,suzy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,lexical,andy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,cause,andy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,fault,bobby
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,lexical,sophia
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,cause,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,fault,bobby
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,cause,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,fault,andy
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,cause,andy
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,lexical,suzy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,fault,andy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,cause,suzy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,lexical,both
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,fault,sophia
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,fault,andy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,lexical,suzy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,cause,suzy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,fault,sophia
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,lexical,bobby
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,cause,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,fault,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,cause,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,fault,andy
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,cause,andy
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,fault,bobby
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,fault,suzy
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
-8,16,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,cause,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,fault,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,cause,andy
-8,17,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,fault,nobody
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,cause,andy
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,lexical,suzy
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,fault,nobody
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
-8,18,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,fault,andy
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,cause,andy
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,lexical,andy
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,fault,sophia
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,cause,bobby
-9,1,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,fault,sophia
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,cause,sophia
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,lexical,bobby
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,fault,andy
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,cause,andy
-9,2,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,lexical,suzy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,fault,bobby
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,lexical,sophia
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,cause,bobby
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,fault,suzy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,lexical,andy
-9,4,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,cause,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,fault,andy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,lexical,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,cause,suzy
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,fault,sophia
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,lexical,bobby
-9,5,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,cause,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,fault,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,cause,bobby
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,fault,suzy
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,cause,suzy
-9,6,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,lexical,andy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,fault,bobby
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,cause,bobby
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,fault,suzy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,cause,suzy
-9,7,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,lexical,andy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,cause,suzy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,fault,bobby
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,cause,bobby
-9,8,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,fault,sophia
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,cause,bobby
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,fault,andy
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
-9,10,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,cause,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,fault,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,lexical,andy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,cause,suzy
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,fault,bobby
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,lexical,sophia
-9,11,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,cause,bobby
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,fault,both
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,fault,both
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
-9,12,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,fault,suzy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,lexical,andy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,cause,andy
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,fault,bobby
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,lexical,sophia
-9,13,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,cause,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,fault,bobby
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,cause,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,lexical,sophia
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,fault,andy
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,cause,andy
-9,14,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,lexical,suzy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,fault,andy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,cause,suzy
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,lexical,both
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,fault,sophia
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
-9,15,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,fault,andy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,lexical,suzy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,cause,suzy
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,fault,sophia
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,lexical,bobby
-9,16,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,cause,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,fault,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,cause,sophia
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,fault,andy
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
-9,17,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,cause,andy
+8,16,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,fault,nobody
+8,16,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,cause,andy
+8,16,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,boy,lexical,suzy
+8,16,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,fault,nobody
+8,16,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
+8,16,268935,1d421a21-505a-41b3-bb31-3f129e2fe104,2921-3287,3270,8.9589,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
+8,17,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,fault,bobby
+8,17,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
+8,17,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
+8,17,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,fault,suzy
+8,17,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
+8,17,261659,d35208d8-332e-4697-8e56-18e99ec83c15,2921-3287,3270,8.9589,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
+8,18,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
+8,18,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,cause,andy
+8,18,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
+8,18,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,fault,andy
+8,18,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,cause,andy
+8,18,267363,2c7edb5c-ada8-4119-ae8f-5b91bbf95942,2921-3287,3270,8.9589,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
+9,1,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,fault,sophia
+9,1,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,cause,sophia
+9,1,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,girl,lexical,bobby
+9,1,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,fault,andy
+9,1,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,cause,andy
+9,1,267472,f032dd68-87b8-4630-ab0b-d52e1579153a,3287-3652,3300,9.0411,m,en,fence_second,fault_first,cause_first,boy,lexical,suzy
+9,3,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,fault,andy
+9,3,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,lexical,suzy
+9,3,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,boy,cause,suzy
+9,3,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,fault,sophia
+9,3,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,lexical,bobby
+9,3,260409,5617f72e-0232-4804-8144-3f8274662504,3287-3652,3330,9.1233,m,en,fence_first,fault_first,cause_second,girl,cause,bobby
+9,4,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,fault,suzy
+9,4,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,cause,suzy
+9,4,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,girl,lexical,andy
+9,4,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,fault,bobby
+9,4,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,cause,bobby
+9,4,259823,e0db1338-e6c5-484f-9556-00767fc8fb64,3287-3652,3390,9.2877,f,en,fence_first,fault_first,cause_first,boy,lexical,sophia
+9,5,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,fault,bobby
+9,5,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,lexical,sophia
+9,5,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,boy,cause,bobby
+9,5,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,fault,suzy
+9,5,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,lexical,andy
+9,5,242268,1467a88a-e767-4d9a-b856-18d64d46e8d0,3287-3652,3330,9.1233,f,en fr,fence_second,fault_first,cause_second,girl,cause,suzy
+9,8,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,fault,suzy
+9,8,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,lexical,andy
+9,8,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,girl,cause,andy
+9,8,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,fault,bobby
+9,8,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,lexical,sophia
+9,8,261349,62b70eda-19ea-490a-8e8c-3a431407695c,3287-3652,3420,9.3699,f,en,fence_first,fault_first,cause_second,boy,cause,sophia
+9,11,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,fault,bobby
+9,11,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,cause,sophia
+9,11,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,boy,lexical,sophia
+9,11,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,fault,andy
+9,11,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,cause,andy
+9,11,261006,fdc8b10e-a119-4311-8664-2111d00f93a6,3287-3652,3510,9.6164,m,en fr ml,fence_second,fault_first,cause_first,girl,lexical,suzy
+9,12,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,fault,andy
+9,12,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,cause,andy
+9,12,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,boy,lexical,andy
+9,12,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,fault,sophia
+9,12,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,cause,bobby
+9,12,261000,c2d3b5a2-c0e5-43d7-95e7-60a84077f873,3287-3652,3300,9.0411,f,en fr es,fence_first,fault_first,cause_first,girl,lexical,bobby
+9,13,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,fault,bobby
+9,13,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,cause,bobby
+9,13,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,boy,lexical,sophia
+9,13,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,fault,suzy
+9,13,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,cause,suzy
+9,13,260548,acab6650-3c64-4520-9cfd-abc0a6d24ed8,3287-3652,3360,9.2055,f,,fence_second,fault_first,cause_first,girl,lexical,andy
+9,14,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,fault,bobby
+9,14,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,cause,bobby
+9,14,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,boy,lexical,sophia
+9,14,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,fault,suzy
+9,14,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,cause,suzy
+9,14,267500,c2666a99-26fc-45b6-91e0-9737323923a5,3287-3652,3360,9.2055,f,en,fence_second,fault_first,cause_first,girl,lexical,andy
+9,15,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,fault,sophia
+9,15,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
+9,15,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,girl,cause,bobby
+9,15,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,fault,andy
+9,15,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
+9,15,241991,46b1c678-a474-471e-8479-baa6273622db,3287-3652,3420,9.3699,m,en es,fence_second,fault_first,cause_second,boy,cause,suzy
+9,16,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,fault,suzy
+9,16,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,lexical,andy
+9,16,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,girl,cause,suzy
+9,16,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,fault,bobby
+9,16,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,lexical,sophia
+9,16,242622,89ee1dca-65a7-4702-b7cb-ff104a604e0d,3287-3652,3420,9.3699,m,en,fence_first,fault_first,cause_second,boy,cause,bobby
+9,17,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,fault,both
+9,17,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,lexical,sophia
+9,17,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,boy,cause,bobby
+9,17,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,fault,both
+9,17,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,lexical,andy
+9,17,261066,311a12e7-4246-4791-9ff1-f0efe237237b,3287-3652,3420,9.3699,m,en,fence_second,fault_first,cause_second,girl,cause,suzy
+9,19,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,fault,andy
+9,19,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,cause,suzy
+9,19,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,boy,lexical,both
+9,19,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,fault,sophia
+9,19,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,cause,bobby
+9,19,267263,7e660cee-df26-4ee2-8168-733022390dce,3287-3652,3540,9.6986,m,en,fence_first,fault_first,cause_first,girl,lexical,bobby
+9,20,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,fault,andy
+9,20,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,lexical,suzy
+9,20,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,boy,cause,suzy
+9,20,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,fault,sophia
+9,20,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,lexical,bobby
+9,20,260720,45427895-091e-4397-937d-576c1aa9eb19,3287-3652,3570,9.7808,f,en,fence_first,fault_first,cause_second,girl,cause,sophia
+9,21,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,fault,sophia
+9,21,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,lexical,bobby
+9,21,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,girl,cause,sophia
+9,21,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,fault,andy
+9,21,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,lexical,suzy
+9,21,260243,19df5293-e0ed-4402-8f46-974dc916f4c7,3287-3652,3630,9.9452,f,en es,fence_second,fault_first,cause_second,boy,cause,andy
