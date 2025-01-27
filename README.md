@@ -10,7 +10,7 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 
 ---
 
-<img src="figures/methodology.jpeg" alt="Methodology" width="100%" align="center">
+<img src="figures/methodology.png" alt="Methodology" width="100%" align="center">
 
 <br clear="left" />
 <br clear="right" />
@@ -20,6 +20,7 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 ## 📂 Repository Structure
 
 ```plaintext
+├── appendix
 ├── code
 │   ├── R
 │   ├── experiments
@@ -30,6 +31,9 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 ```
 
 ### 🔍 Detailed Breakdown
+- **`appendix/`**: Contains additional information and analyses not included in the paper.
+  - **`appendix.pdf`**: ([The appendix document.](appendix/appendix.pdf))
+
 - **`code/`**: All code for running experiments, analyzing data, and generating figures.
   - **`experiments/`**: Experiment-specific code, including pre-registrations available via the Open Science Framework:
     - **Experiment 1**  
