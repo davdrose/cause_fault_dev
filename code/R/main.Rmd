@@ -1,5 +1,6 @@
 ---
 title: "Cause and fault in development"
+author: "David Rose*, Cici Hou*, Shaun Nichols, Tobias Gerstenberg & Ellen Markman"
 date: "`r Sys.time()`"
 output:
   bookdown::html_document2:
