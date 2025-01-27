@@ -10,7 +10,7 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 
 ---
 
-<img src="figures/methodology.png" alt="Methodology" width="100%" align="center">
+<img src="figures/methodology.jpeg" alt="Methodology" width="100%" align="center">
 
 <br clear="left" />
 <br clear="right" />
