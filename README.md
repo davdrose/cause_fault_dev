@@ -5,8 +5,9 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 ---
 
 ## 📖 Table of Contents
-- [Introduction](#introduction)
-- [Repository Structure](#repository-structure)
+- [Introduction](#-introduction)
+- [Repository Structure](#-repository-structure)
+- [About the Experiments](#-about-the-experiments)
 
 ---
 
