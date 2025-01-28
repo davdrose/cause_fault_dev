@@ -79,7 +79,7 @@ It’s widely thought that responsibility requires causation. This is codified i
 ## 🔬 About the Experiments
 
 - Experiments involving **children** were conducted using **Lookit**.  
-- Pre-registrations for all experiments are accessible on the Open Science Framework (links provided in the [Repository Structure](#repository-structure)).
+- Pre-registrations for all experiments are accessible on the Open Science Framework (links provided in the [Repository Structure](#-repository-structure)).
 
 ---
 <!-- 
