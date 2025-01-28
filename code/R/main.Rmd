@@ -219,10 +219,10 @@ p1 = ggplot(mapping = aes(x = age_float,
   ylab(element_blank()) +
   scale_fill_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), 
                     breaks=c("cause", "lexical", "fault"),
-                    labels = c("caused", "fault", "lexical")) +
+                    labels = c("caused", "lexical", "fault")) +
   scale_color_manual(values = c("cause" = "#dc3410", "lexical" = "#377EB8", "fault" = "#4DAF4A"), 
                      breaks=c("cause", "lexical", "fault"),
-                     labels = c("caused", "fault", "lexical")) +
+                     labels = c("caused", "lexical", "fault")) +
   scale_shape_manual(values = c(23, 21, 24)) +
   scale_y_continuous(breaks = seq(0, 1, 0.25),
                      labels = c("100% \n proximal", "75%", "50%", "75%", "100% \n distal"),
