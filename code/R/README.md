@@ -19,6 +19,8 @@ The R script (`main.Rmd`) contains the following sections:
   - **Plots**: Visualizing results using `ggplot2`.
 - **Experiment 2 (Absence Cases)**:
   - Structure similar to Experiment 1.
+- **Appendix**:
+  - **Preregistered Analyses**: Further Bayesian models (e.g., question-by-age interactions) and extended plots and tables not included in the main text.
 - **Session Info**: Displaying the session details for reproducibility.
 
 ### 2. Cache Folder
