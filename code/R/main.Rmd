@@ -227,7 +227,7 @@ p1 = ggplot(mapping = aes(x = age_float,
   scale_y_continuous(breaks = seq(0, 1, 0.25),
                      labels = c("100% \n proximal", "75%", "50%", "75%", "100% \n distal"),
                      limits = c(0, 1)) + 
-  scale_x_continuous(name = "Age",
+  scale_x_continuous(name = "Age (in years)",
                      breaks = 3:9,
                      labels = c("3", "4", "5", "6", "7", "8", "9")) +
   labs(y = "Probability of selecting \n proximal or distal cause") +
@@ -318,36 +318,20 @@ p2 = ggplot(data = df.plot,
                                "lexical + fault" = "#40E0D0",
                                "caused + lexical" = "#800080",
                                "all" = "#FFFFFF")) +
-  # scale_fill_manual(values = c("caused only" = "#FF7F00",
-  #                              "fault only" = "#800080",
-  #                              "lexical only" = "#FFFF33",
-  #                              "caused + fault" = "#CC527A",
-  #                              "lexical + fault" = "#C66900",
-  #                              "caused + lexical" = "#FFB74D",
-  #                              "all" = "#A0522D",
-  #                              "none" = "#999999")) +
-  # scale_color_manual(values = c("caused only" = "#FF7F00",
-  #                              "fault only" = "#800080",
-  #                              "lexical only" = "#FFFF33",
-  #                              "caused + fault" = "#CC527A",
-  #                              "lexical + fault" = "#C66900",
-  #                              "caused + lexical" = "#FFB74D",
-  #                              "all" = "#A0522D",
-  #                              "none" = "#999999")) +
   scale_shape_manual(values = c(21, 23)) +
   scale_y_continuous(breaks = seq(0, 100, 25),
                      labels = str_c(seq(0, 100, 25), "%"),
                      expand = expansion(add = c(0, 0))) +
   scale_x_discrete(expand = expansion(add = c(0, 0))) +
   coord_cartesian(clip = "off") +
-  labs(y = "Response pattern \n\ probability") +
+  labs(y = "Response pattern \n\ probability",
+       x = "Age (in years)") +
   theme(legend.position = "bottom",
         legend.title = element_blank(),
         legend.text = element_text(size = 14),
         axis.text.y = element_text(size = 12),
         axis.title.y = element_text(size = 16),
         axis.text.x = element_markdown(),
-        axis.title.x = element_blank(),
         strip.background = element_blank(),
         strip.text = element_text(size = 16),
         panel.spacing = unit(.4, "cm")) +
@@ -355,6 +339,7 @@ p2 = ggplot(data = df.plot,
                              override.aes = list(order = c(1, 3, 2, 6, 4, 5, 7, 8))),
          color = guide_legend(order = 1, nrow = 2, byrow = TRUE,
                               override.aes = list(order = c(1, 3, 2, 6, 4, 5, 7, 8))))
+
 
 
 ```
@@ -576,7 +561,7 @@ p3 = ggplot(mapping = aes(x = age_float,
   scale_y_continuous(breaks = seq(0, 1, 0.25),
                      labels = c("100% \n direct", "75%", "50%", "75%", "100% \n absent"),
                      limits = c(0, 1)) + 
-  scale_x_continuous(name = "Age",
+  scale_x_continuous(name = "Age (in years)",
                      breaks = 3:9,
                      labels = c("3", "4", "5", "6", "7", "8", "9")) +
   labs(y = "Probability of selecting \n direct or absent cause") +
@@ -668,36 +653,20 @@ p4 = ggplot(data = df.plot,
                                "lexical + fault" = "#40E0D0",
                                "caused + lexical" = "#800080",
                                "all" = "#FFFFFF")) +
-  # scale_fill_manual(values = c("caused only" = "#FF7F00",
-  #                              "fault only" = "#800080",
-  #                              "lexical only" = "#FFFF33",
-  #                              "caused + fault" = "#CC527A",
-  #                              "lexical + fault" = "#C66900",
-  #                              "caused + lexical" = "#FFB74D",
-  #                              "all" = "#A0522D",
-  #                              "none" = "#999999")) +
-  # scale_color_manual(values = c("caused only" = "#FF7F00",
-  #                              "fault only" = "#800080",
-  #                              "lexical only" = "#FFFF33",
-  #                              "caused + fault" = "#CC527A",
-  #                              "lexical + fault" = "#C66900",
-  #                              "caused + lexical" = "#FFB74D",
-  #                              "all" = "#A0522D",
-  #                              "none" = "#999999")) +
   scale_shape_manual(values = c(21, 23)) +
   scale_y_continuous(breaks = seq(0, 100, 25),
                      labels = str_c(seq(0, 100, 25), "%"),
                      expand = expansion(add = c(0, 0))) +
   scale_x_discrete(expand = expansion(add = c(0, 0))) +
   coord_cartesian(clip = "off") +
-  labs(y = "Response pattern \n\ probability") +
+  labs(y = "Response pattern \n\ probability",
+       x = "Age (in years)") +
   theme(legend.position = "bottom",
         legend.title = element_blank(),
         legend.text = element_text(size = 14),
         axis.text.y = element_text(size = 12),
         axis.title.y = element_text(size = 16),
         axis.text.x = element_markdown(),
-        axis.title.x = element_blank(),
         strip.background = element_blank(),
         strip.text = element_text(size = 16),
         panel.spacing = unit(.4, "cm")) +
