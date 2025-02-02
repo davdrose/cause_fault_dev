@@ -42,8 +42,7 @@ It’s widely thought that responsibility requires causation. This is codified i
       - Fault question first ordering ([pre-registration](https://osf.io/2u4fp/?view_only=405ad3e533ba4e85982c97b10c372257))  
       - Fault question last ordering ([pre-registration](https://osf.io/f4n6w/?view_only=c6898909be10454dad7075fd519a7afc))  
     - **Experiment 2** ([pre-registration](https://osf.io/sjakw/?view_only=1f1bc44ef0f24b869f6eef3a839440ad))
-  - **`R/`**: Scripts for data analysis and figure generation.  
-    (View a rendered file [here](https://davdrose.github.io/cause_fault_dev/)).
+  - **`R/`**: Scripts for data analysis and figure generation. To see a rendered file, click "Website" above.
 
 - **`data/`**: Contains anonymized datasets for all experiments.
 
