@@ -559,12 +559,12 @@ p3 = ggplot(mapping = aes(x = age_float,
                      labels = c("caused", "lexical", "fault")) +
   scale_shape_manual(values = c(23, 21, 24)) +
   scale_y_continuous(breaks = seq(0, 1, 0.25),
-                     labels = c("100% \n direct", "75%", "50%", "75%", "100% \n absent"),
+                     labels = c("100% \n proximal", "75%", "50%", "75%", "100% \n distal"),
                      limits = c(0, 1)) + 
   scale_x_continuous(name = "Age (in years)",
                      breaks = 3:9,
                      labels = c("3", "4", "5", "6", "7", "8", "9")) +
-  labs(y = "Probability of selecting \n direct or absent cause") +
+  labs(y = "Probability of selecting \n proximal or distal cause") +
   theme(legend.position = "bottom",
         legend.title = element_blank(),
         legend.text = element_text(size = 14),
@@ -637,7 +637,12 @@ p4 = ggplot(data = df.plot,
                           fill = response_pattern)) +
   geom_col(color = "black") +
   facet_wrap(~type,
-             scales = "free_x") +
+             scales = "free_x",
+            labeller = labeller(
+                type = c(direct = "proximal",
+                         absent = "distal")
+              )
+    ) +
     scale_fill_manual(values = c("caused only" = "#dc3410",
                                "fault only" = "#4DAF4A",
                                "lexical only" = "#377EB8",
@@ -946,7 +951,7 @@ fit.brm.cause.children.absent.age
 
 ```
 
-##### Direct
+##### Proximal
 ###### Question by Age
 
 ```{r message=FALSE, warning=FALSE}
@@ -1024,7 +1029,7 @@ df.means = df.children %>%
 df.means = df.means %>%
   mutate(question = factor(question, levels = c("cause", "lexical")))
 
-custom_labels = as_labeller(c("absent" = "Absent Cause", "direct" = "Direct Cause"))
+custom_labels = as_labeller(c("absent" = "Distal Cause", "direct" = "Proximal Cause"))
 
 ggplot(mapping = aes(x = age_float, 
                      y = response,
