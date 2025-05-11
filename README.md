@@ -13,9 +13,7 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 
 ## 💡 Introduction
 
-Responsibility requires causation. This is part of philosophical orthodoxy, embodied in the law, and reflected in psychological theories of responsibility. Even models suggesting that blame and praise influence causal judgment presuppose that causation must be established before such biases can operate.
-
-The connection between responsibility and causation is also reflected in children's judgments: They don't blame someone merely associated with an outcome; causal involvement is necessary. Young children prioritize the magnitude of the outcome that was caused, regardless of intent, while older children also consider intentions. This "outcome-to-intention shift" may stem from distinct processes: one focused on mental states for judging intentionality, the other on causation. While one of the central questions concerning this shift is how, and when, mental states become integrated, it is usually assumed that causation is established first. But there are different kinds of causes that children reason about, which may influence their developing understanding of responsibility.
+Responsibility requires causation. But there are different kinds of causes. Some are connected to their effects; others are disconnected. We ask how children's developing ability to distinguish causes relates to their understanding of moral responsibility. We found in Experiment 1 that when Andy hits Suzy with his bike, she falls into a fence and it breaks, 3-year-old children treated "caused", "break" and "fault" as referring to the direct cause, Suzy. By 4, they differentiated causes: Andy "caused" the fence to break, it's his "fault", but Suzy "broke" it. We found in Experiment~2 that when the chain involved disconnection, 3-year-olds focused only on the direct cause. Around 5 they distinguished causes, saying that the disconnecting cause "caused" an object to break, it’s their "fault", but the direct cause "broke" it. Our findings relate to the outcome-to-intention shift in moral responsibility and suggest a more fundamental shift in children's understanding of causation.
 
 <img src="figures/exp_overview.png" alt="Methodology" width="100%" align="center">
 
@@ -41,9 +39,9 @@ The connection between responsibility and causation is also reflected in childre
 - **`code/`**: All code for running experiments, analyzing data, and generating figures.
   - **`experiments/`**: Experiment-specific code, including pre-registrations available via the Open Science Framework:
     - **Experiment 1**  
-      - Fault question first ordering ([pre-registration](https://osf.io/2u4fp/?view_only=405ad3e533ba4e85982c97b10c372257))  
-      - Fault question last ordering ([pre-registration](https://osf.io/f4n6w/?view_only=c6898909be10454dad7075fd519a7afc))  
-    - **Experiment 2** ([pre-registration](https://osf.io/sjakw/?view_only=1f1bc44ef0f24b869f6eef3a839440ad))
+      - Fault question first ordering ([pre-registration](https://osf.io/2u4fp))  
+      - Fault question last ordering ([pre-registration](https://osf.io/f4n6w))  
+    - **Experiment 2** ([pre-registration](https://osf.io/sjakw))
   - **`R/`**: Scripts for data analysis and figure generation. See a rendered file [here](https://davdrose.github.io/cause_fault_dev/).
 
 - **`data/`**: Contains anonymized datasets for all experiments.
