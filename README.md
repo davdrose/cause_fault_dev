@@ -2,22 +2,31 @@
 
 Welcome to the repository for the paper **"Cause and Fault in Development"**. This repository contains the experiments, data, analyses, and figures that support the research.
 
----
+## 👥 Authors
+
+- **David Rose**★†¹  
+- **Cici Hou**★²  
+- **Shaun Nichols**³  
+- **Tobias Gerstenberg**¹  
+- **Ellen M. Markman**¹  
+
+¹ Department of Psychology, Stanford University  
+² Department of Computer Science, Stanford University  
+³ Department of Philosophy, Cornell University  
+
+★ joint first authors  
+† davdrose@stanford.edu
 
 ## 📖 Table of Contents
 - [Introduction](#-introduction)
 - [Repository Structure](#-repository-structure)
 - [About the Experiments](#-about-the-experiments)
 
----
-
 ## 💡 Introduction
 
 Responsibility requires causation. But there are different kinds of causes. Some are connected to their effects; others are disconnected. We ask how children's developing ability to distinguish causes relates to their understanding of moral responsibility. We found in Experiment 1 that when Andy hits Suzy with his bike, she falls into a fence and it breaks, 3-year-old children treated "caused", "break" and "fault" as referring to the direct cause, Suzy. By 4, they differentiated causes: Andy "caused" the fence to break, it's his "fault", but Suzy "broke" it. We found in Experiment 2 that when the chain involved disconnection, 3-year-olds focused only on the direct cause. Around 5 they distinguished causes, saying that the disconnecting cause "caused" an object to break, it’s their "fault", but the direct cause "broke" it. Our findings relate to the outcome-to-intention shift in moral responsibility and suggest a more fundamental shift in children's understanding of causation.
 
 <img src="figures/exp_overview.png" alt="Methodology" width="100%" align="center">
-
----
 
 ## 📂 Repository Structure
 
@@ -50,7 +59,6 @@ Responsibility requires causation. But there are different kinds of causes. Some
 
 - **`figures/`**: All figures used in the paper, generated using scripts in `code/R/`.
 
----
 <!-- 
 ## 🚀 Getting Started
 
