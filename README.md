@@ -1,5 +1,7 @@
 # Cause and Fault in Development
 
+Preprint: [https://osf.io/preprints/psyarxiv/e58br_v1](https://osf.io/preprints/psyarxiv/e58br_v1)
+
 Welcome to the repository for the paper **"Cause and Fault in Development"**. This repository contains the experiments, data, analyses, and figures that support the research.
 
 ## 👥 Authors
@@ -89,8 +91,6 @@ Responsibility requires causation. But there are different kinds of causes. Some
 - Experiments involving **children** were conducted using **Lookit**.  
 - Pre-registrations for all experiments are accessible on the Open Science Framework (links provided in the [Repository Structure](#-repository-structure)).
 
----
-
 ## 🖋️ CRediT author statement
 
 [What is a CRediT author statement?](https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement)
@@ -112,7 +112,3 @@ Responsibility requires causation. But there are different kinds of causes. Some
 | Project administration     | X          |          | X             | X                  | X                |
 | Funding acquisition        |            |          |               |                    | X                |
 
-
----
-
-Feel free to suggest additional improvements or features via issues or pull requests!
