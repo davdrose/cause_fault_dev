@@ -21,6 +21,7 @@ Welcome to the repository for the paper **"Cause and Fault in Development"**. Th
 - [Introduction](#-introduction)
 - [Repository Structure](#-repository-structure)
 - [About the Experiments](#-about-the-experiments)
+- [CRediT author statement](#-credit-author-statement)
 
 ## 💡 Introduction
 
@@ -89,11 +90,29 @@ Responsibility requires causation. But there are different kinds of causes. Some
 - Pre-registrations for all experiments are accessible on the Open Science Framework (links provided in the [Repository Structure](#-repository-structure)).
 
 ---
-<!-- 
-## 🖼️ Figures
 
-All figures in the paper can be found in the `figures/` directory, generated using the analysis scripts in `code/R/`.
+## 🖋️ CRediT author statement
 
---- -->
+[What is a CRediT author statement?](https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement)
+
+| Term                       | David Rose | Cici Hou | Shaun Nichols | Tobias Gerstenberg | Ellen M. Markman |
+| -------------------------- | ---------- | -------- | ------------- | ------------------ | ---------------- |
+| Conceptualization          | X          | X        | X             | X                  | X                |
+| Methodology                | X          | X        | X             |                    | X                |
+| Software                   | X          | X        |               |                    |                  |
+| Validation                 | X          | X        |               |                    |                  |
+| Formal analysis            | X          | X        |               |                    |                  |
+| Investigation              | X          | X        |               |                    |                  |
+| Resources                  |            | X        |               |                    |                  |
+| Data Curation              |            | X        |               |                    |                  |
+| Writing – Original Draft   | X          | X        |               |                    |                  |
+| Writing – Review & Editing | X          | X        | X             | X                  | X                |
+| Visualization              | X          | X        |               |                    |                  |
+| Supervision                | X          |          | X             | X                  | X                |
+| Project administration     | X          |          | X             | X                  | X                |
+| Funding acquisition        |            |          |               |                    | X                |
+
+
+---
 
 Feel free to suggest additional improvements or features via issues or pull requests!
